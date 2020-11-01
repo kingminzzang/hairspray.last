@@ -1,0 +1,61 @@
+@-webkit-keyframes minzz {
+	0%	{transform: opacity (100deg);
+	}
+	
+	100%	{transform: opacity (0deg);}
+
+	}
+
+html {margin: 0px;}
+body {height: 100%; overflow-x: hidden; overflow-y: hidden; z-index:-2;}
+
+.title {width:70%; padding: 50px;}
+
+.opacity0{opacity: 0%}
+.opacity100{opacity: 100%}
+
+.spray{opacity: 0%
+}
+.spray:hover{opacity: 100%
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+
+
+
+span {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  position: absolute;
+  pointer-events: none;
+  background: #55b9f3;
+  box-shadow:  20px 20px 60px #489dcf, 
+             -20px -20px 60px #62d5ff;
+  transform: translate(-50%, -50%);
+  animation: blow 4s linear infinite;
+  z-index: 2;
+}
+
+
+@keyframes blow {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0deg) blur(8px); 
+    z-index: 2;
+
+  }
+  100% {
+    transform: translate(-50%, -1000%);
+    opacity: 0;
+    filter: hue-rotate(720deg) blur(8px);
+    z-index: 2;
+  }
+}
+
